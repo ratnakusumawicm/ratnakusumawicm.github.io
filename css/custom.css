@@ -1,0 +1,52 @@
+h1{
+    color: #492701 ;
+    margin-top: 15px;
+    margin-bottom: 5px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+p{
+    font-size: 50px;
+    margin-bottom: -30px;
+    margin-top: 20px;
+    margin-left: 280px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    text-align: right;
+}
+.col2{
+    padding-left: 120px;
+}
+.form-control{
+    border-radius: 50px;
+    width: 240px;
+    height: 30px;
+    margin-bottom: -10px;    
+    border-color: #492701;
+    border-width: 1.5px;
+    text-align: center;
+
+}
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    width: 70px;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;    
+    box-shadow: 0 0 5px rgb(80, 66, 54);
+    background-image: linear-gradient(to right, #44321f 0%, #d1b788 51%, #524231 100%);
+}
+.btn-primary:hover{
+    background-position: right center;
+}
+.vertline { 
+    border-left: 2px solid black; 
+    height: 180px; 
+    position:absolute; 
+    left: 50%; 
+    margin-top: 10px;
+}
