@@ -6,109 +6,200 @@
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <script src="js/bootstrap.min.js"></script>
     <script src='main.js'></script>
-    <p>
-        <a href="#" style="margin-right: 20px; margin-left: 5px;">E-LEARNING</a>
-        <a href="#" style="margin-right: 20px; margin-left: 60px;">Home</a>
-        <a href="#" style="margin-right: 20px;">My Courses</a>
-        <a href="#" style="margin-right: 700px;">Help</a>
-        <a href="#" style="margin-right: 30px;">User</a>
-        <button>
-            Log out
-        </button>       
-    </p>
+ 
 <head>
-    <title>Home</title>
+
 </head>
-<body>
-    <table cellpadding="5" width="1250px">
+<body class="home">
+    <nav class="navbar navbar-fixed-top navbar-expand-lg">
+        <a class="navbar-brand" href="#">E-LEARNING</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+            
+          </ul>
+          <button type="submit" class="btn btn-primary">Log Out</button>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-4">
+          <h3>Calendar</h3>
+          <h4>December</h4>
+            <table style="border-block: 10px;">
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td id="red">4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td id="red">11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td id="red">18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td id="red">25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                </tr>
+              </table>
+        
+
+        </div>
+        <div class="col-8">
+
+              
+        </table>
+      </td>
+  <td rowspan="2" width="850px">
+
+    <br></br>
+      <table  style="border-block: 10px;">
+              <tr height="120px">
+                  <th width="150px"> 
+                    <div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">MATEMATIKA</h5>
+                        <p class="card-text">Matematika semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div>
+                  </th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">KIMIA</h5>
+                        <p class="card-text">Kimia semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">BAHASA INGGRIS</h5>
+                        <p class="card-text">Bahasa Inggris semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">PKN</h5>
+                        <p class="card-text">PKN semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+              </tr>
+              <tr height="120px">
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">BIOLOGI</h5>
+                        <p class="card-text">Biologi semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">FISIKA</h5>
+                        <p class="card-text">Fisika semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">SENI BUDAYA</h5>
+                        <p class="card-text">Seni Budaya semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+                  <th width="150px"><div class="card">
+                      <img src="..." class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">BAHASA INDONESIA</h5>
+                        <p class="card-text">Bahasa Indonesia semester 2</p>
+                        <a href="#" class="btn btn-primary">Go</a>
+                      </div>
+                    </div></th>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+      
+
+    <!-- <table cellpadding="5" width="1250px">
         <tr>
             <td width="400px">
             	<table>
         		<tr><td>
         		<!-- <div class="container" style="margin-left: 5px;"> -->
-                	<h3>Calendar</h3>
-                	<h4>December</h4>
-                    <table style="border-block: 10px;">
-                        <tr>
-                            <th>Sun</th>
-                            <th>Mon</th>
-                            <th>Tue</th>
-                            <th>Wed</th>
-                            <th>Thu</th>
-                            <th>Fri</th>
-                            <th>Sat</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td id="red">4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td id="red">11</td>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                        </tr>
-                        <tr>
-                            <td id="red">18</td>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <td id="red">25</td>
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                        </tr>
-                    	</table>
-                    </table>
-            		</td>
-            <td rowspan="2" width="850px">
-            	<p>
-            	<label>Course Overview</label>
-            	<input type="text" name="" placeholder="search" style="margin-left: 230px;" size="20"/>
-            	<label>sort by</label>
-            	<button>name</button>
-            	</p>
-            	<br></br>
-            		<table border="1px" style="border-block: 10px;">
-                        <tr height="120px">
-                            <th width="150px">MATEMATIKA</th>
-                            <th width="150px">FISIKA</th>
-                            <th width="150px">PKN</th>
-                            <th width="150px">BAHASA INGGRIS</th>
-                        </tr>
-                        <tr height="120px">
-                            <th width="150px">SENI BUDAYA</th>
-                            <th width="150px">BIOLOGI</th>
-                            <th width="150px">KIMIA</th>
-                            <th width="150px">PENDIDIKAN AGAMA</th>
-                        </tr>
-                    	</table>
+                
             </td>
         </tr>
         <tr><td>
@@ -119,6 +210,6 @@
                  </ul>
             </div></td>
         </tr>
-    </table>
+    </table> -->
 </body>
 </html>
