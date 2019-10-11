@@ -10,7 +10,7 @@
 </head>
 <body>
     <title>LOGIN</title>
-    <img src="bg-login.jpg" height="100%" width="100%">
+    <img src="bg-login.jpg" height="100%" width="100%" style="">
     <div class="judul">
         
     </div>
@@ -32,7 +32,8 @@
                             <div class="form-group">                  
                               <input type="password" class="form-control" id="Password" placeholder="Password">
                             </div>
-                            <button type="submit" class="btn">Login</button>
+                            <button type="submit" class="btn" 
+                            onclick="event.preventDefault();javascript:window.location.href='home.html';">Login</button>
                             <a href="#" style="font-size: 12px; color: #492701; margin-left: 10px;">
                                 Forgot password? Click here</a>
                           </form>
