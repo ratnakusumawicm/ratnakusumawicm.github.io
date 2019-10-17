@@ -8,7 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <head>
  
@@ -16,6 +15,7 @@
 <body id="course">
   <div class="navbar">
     <ul>
+        <li> <img src="logo.png" id="logo"></li> 
         <li><a href="#home">Home</a></li>      
         <li class="dropdown">
           <a href="javascript:void(0)" class="active-page dropbtn">My Courses<i class="fa fa-fw fa-caret-down"></i></a>
@@ -29,7 +29,7 @@
             <a href="#">Sejarah</a>
             <a href="#">Seni Budaya</a>
           </div>
-          <li><a href="#help">Help</a></li>
+          <li><a href="#help">Files</a></li>
         </li>
         <li class="kanan">            
             <button type="submit" class="btn" id="logout">Log out</button>
@@ -51,11 +51,10 @@
                   <form class="filetugas" action="upload.php" method="POST">
                     <input type="file" multiple>
                     <p>Drag your files here or click in this area.</p>
-                    <button type="submit">Upload</button>
+                    <button type="submit" onclick="event.preventDefault(); window.location.href=''">Upload</button>
                   </form>
-                </div>    
-      
-              
+                  
+                </div>      
     </div> 
 
       <div class="columncourse rightcourse">
@@ -86,14 +85,15 @@
  
     </div>
   </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>          
-        <script>
-            $(document).ready(function(){
-            $('form input').change(function () {
-            $('form p').text(this.files.length + " file(s) selected");
-            });
-          });
-        </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+          $(document).ready(function(){
+  $('form input').change(function () {
+    $('form p').text(this.files.length + " file(s) selected");
+  });
+});
+</script>
+
 </body>
  
 
