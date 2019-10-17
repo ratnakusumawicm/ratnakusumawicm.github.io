@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login - E-learning</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+    <title>LOGIN</title>
+    <img src="bg-login.jpg" height="100%" width="100%">
+    <div class="judul">
+        
+    </div>
+    <div class="wrapper">
+           
+            <div class="judull">
+                <p class="judul">e-learning</p>
+                <p class="judulbawah">SMA X</p>
+            </div>
+              <div class="vertline">
+                
+              </div>
+              <div class="login">
+                    <h1>LOGIN</h1>
+                    <form name="myForm" onsubmit="return validateForm()" method="post" action="home.html">
+                            <div class="form-group">                  
+                              <input type="text" class="form-control" name="nisn" placeholder="NISN">
+                            </div>
+                            <div class="form-group">                  
+                              <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn" 
+                            onclick="check(this.form)" value="login">Login</button>
+                    
+                            <!-- <button type="submit" class="btn" 
+                            onclick="event.preventDefault();javascript:window.location.href='home.html';">Login</button> -->
+                            <a href="#" style="font-size: 12px; color: #492701; margin-left: 10px;">
+                                Forgot password? Click here</a>
+                          </form>
+              </div>
+            </div>
+            <script>
+            function validateForm() {
+              var nisn = document.forms["myForm"]["nisn"].value;
+              var password = document.forms["myForm"]["password"].value;
+              if (nisn == "") {
+                alert("NISN must be filled out");
+                return false;
+              }
+              if (password == "") {
+                alert("NISN must be filled out");
+                return false;
+              }
+            }
+          </script>
+</body>
+</html>
