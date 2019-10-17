@@ -1,12 +1,23 @@
 .navbar{
-  /* margin-top: -10px; */
-
+  margin-left: 15px;
+}
+.navbar ul{
+  
+}
+#logo{
+  margin-top: -40px;
+  height: 150px;
+  width: 150px;
+  margin-bottom: -40px;
+  margin-right: 30px;
+  
 }
 body{
   height:100%;
   margin:0px;
   padding:0px;
   width:100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .wrapper{
@@ -25,7 +36,6 @@ body{
   padding-top: 10px;
 }
 .wrapper-home{
-
 }
 .calendar{
   grid-column: span 4;
@@ -320,6 +330,7 @@ li.dropdown {
   float: right;
   margin-top: 12px;
   margin-right: 20px;
+  cursor: pointer;
 }
 #profname{
   margin-top: 2px;
@@ -333,7 +344,16 @@ li.dropdown {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.cards-list a{
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none ;
+}
 .card {
   margin: 30px auto;
   width: 200px;
@@ -360,7 +380,7 @@ li.dropdown {
 .card .card_title {
   text-align: center;
   border-radius: 0px 0px 40px 40px;
-  font-family: sans-serif;
+  font-family: "Open Sans";
   font-weight: bold;
   font-size: 20px;
   margin-top: -10px;
@@ -378,6 +398,17 @@ li.dropdown {
   .card-list {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
+  }
+  span #judul-course{
+    width:100%;
+  }
+  .column{
+    width:100%;
+    margin:auto;
+  }
+
+  .wrapper-home{
+    width:450px;
   }
 }
 
@@ -401,38 +432,47 @@ li.dropdown {
   padding-left: 20px;
 }
 .topic{
+  /* display: inline; */
   background-color: #f3efdd;
   border-radius: 15px;
   padding: 20px;
-  height: 80px;
+  width: 80%;
+  height: auto;
   margin-left: 20px;
   box-shadow:0 0 12px #201d1c;
   margin-bottom: 10px;
 }
-.topic li a{
-  display: inline;
+.topic ul{
+  display: table-row;
 }
-.detailmapel li a{
-  display: inline;
-  color: white;
-  margin-bottom: 5px;
+.topic ul li{
+  display: table-cell;
+  margin-bottom: -15px;
 }
-.daftarmapel li a{
-  display: inline;
-  color: white;
-  margin-bottom: 5px;
+.detailmapel li a, .daftarmapel li a{
+  color: white;  
+  padding:0;
 }
-.topic ul, .detailmapel ul{
+.detailmapel ul{
+  width:auto;
+}
+.detailmapel li, .daftarmapel li{ 
+float: left;
+width:100%;
+margin-left: 20px;
+margin-bottom: 10px;
+}
+.detailmapel ul, .daftarmapel ul{
   margin-top: 10px;  
 }
 .topic span, .detailmapel span{
-  font-size: 20px;
+  font-size: 20px; 
 }
-.topic ul, .daftarmapel ul{
-  margin-top: 10px;
+.daftarmapel{
+  display:table;
 }
-.topic span, .daftarmapel span{
-  font-size: 20px;
+.daftarmapel ul{
+  width:auto;
 }
 .rightcourse{
   width:30%;
@@ -450,11 +490,72 @@ li.dropdown {
   margin-bottom: 10px;
 }
 .daftarmapel{
-  background-color: #a88c6c;
+  background-color: #777067;
   color: white;
   border-radius: 15px;
   padding: 20px;
-  height: 120px;
+  height: 80px;
   margin-left: 20px;
   box-shadow:0 0 5px #201d1c;
   margin-bottom: 10px;
+}
+.daftarmapel .active{
+  color: rgb(241, 184, 129);
+}
+.filetugas{
+  position: absolute;
+  margin-left: 20px;
+  width: 500px;
+  height: 200px;
+  border: 4px dashed rgb(0, 0, 0);
+  border-radius: 15px;
+}
+.filetugas p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: #000000;
+  font-family: Arial;
+}
+.filetugas input{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
+.filetugas button{
+  margin: 0;
+  font-weight: bold;
+  background-size: 100% auto;
+  background-image: linear-gradient(to right, #44321f 0%, #ffe0aa 50%);  
+  font-family: sans-serif;   
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;    
+  box-shadow: 0 0 5px rgb(80, 66, 54);
+  border: none;
+  width: 508px;
+  height: 35px;
+  margin-top: -20px;
+  margin-left: -4px;
+  border-radius: 15px;
+  border-bottom: 4px solid rgb(39, 34, 25)
+  transition: all .2s ease;
+  outline: none;
+}
+.filetugas button:hover{
+  background: rgb(117, 96, 71);
+  background-position: right center;
+}
+.filetugas button:active{
+  border:0;
+}
+.ket-tugas{
+  width: 500px;
+  padding: 20px;
+}
