@@ -101,7 +101,7 @@ h1{
     left: 50%; 
     margin-top: 20px;
 }
-#home, #course{
+#home, #course, #task, #files{
     background-image: linear-gradient(to bottom, #fcf5ed  0%, #d1b788 51%, #44321f 100%);   
     background-repeat: no-repeat;
     background-size:cover;   
@@ -432,7 +432,6 @@ li.dropdown {
   padding-left: 20px;
 }
 .topic{
-  /* display: inline; */
   background-color: #f3efdd;
   border-radius: 15px;
   padding: 20px;
@@ -528,7 +527,7 @@ margin-bottom: 10px;
   opacity: 0;
 }
 .filetugas button{
-  margin: 0;
+  margin-bottom: 20px;
   font-weight: bold;
   background-size: 100% auto;
   background-image: linear-gradient(to right, #44321f 0%, #ffe0aa 50%);  
@@ -558,4 +557,26 @@ margin-bottom: 10px;
 .ket-tugas{
   width: 500px;
   padding: 20px;
+}
+.ket-tugas table td, table th{
+  /* border: 1px solid black; */
+  padding: 10px;
+  background-color: #f3efdd;
+  border-radius: 10px;
+}
+.kolomfile ul{
+  float: left;
+  padding: 10px;
+  background-color: #f3efdd;
+  border-radius: 15px;
+  margin-left: 20px;
+  width: 60%;
+}
+.kolomfile li{
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+.kolomfile{
+  display: table;
+  width: 30%;
 }
