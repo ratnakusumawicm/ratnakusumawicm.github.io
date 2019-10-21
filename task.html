@@ -12,15 +12,15 @@
     <head>
  
 </head>
-<body id="course">
+<body id="task">
   <div class="navbar">
     <ul>
         <li> <img src="logo.png" id="logo"></li> 
-        <li><a href="#home">Home</a></li>      
+        <li><a href="home.html">Home</a></li>      
         <li class="dropdown">
           <a href="javascript:void(0)" class="active-page dropbtn">My Courses<i class="fa fa-fw fa-caret-down"></i></a>
           <div class="dropdown-content">
-            <a href="#">Matematika</a>
+            <a href="course.html">Matematika</a>
             <a href="#">Fisika</a>
             <a href="#">Bahasa Indonesia</a>
             <a href="#">Kimia</a>
@@ -29,7 +29,7 @@
             <a href="#">Sejarah</a>
             <a href="#">Seni Budaya</a>
           </div>
-          <li><a href="#help">Files</a></li>
+          <li><a href="files.html">Files</a></li>
         </li>
         <li class="kanan">            
             <button type="submit" class="btn" id="logout">Log out</button>
@@ -43,9 +43,34 @@
             <h2>Assignments</h2>        
             <div class="ket-tugas">
                 <span>
-                  Silakan upload tugas Bab 1 di bawah ini
+                  Silakan upload tugas Bab 1 di bawah ini<p>Buat 5 soal beserta jawaban. 
+                  soal dapat berupa pilihan ganda ataupun isian.
+                  soal dibuat berdasarkan materi yang telah diajarkan atau topik-topik lain yang memiliki 
+                  korelasi dengan materi yang sudah diajarkan.</p>
                 </span>
-        
+                <h3>Status</h3>
+            <table>
+                <tr>
+                    <td>Submission Status</td>
+                    <td>Not submitted</td>
+                </tr>
+                <tr>
+                    <td>Due Date</td>
+                    <td>Sun, 2 Februari 2020, 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Time Remaining</td>
+                    <td>7 days left</td>
+                </tr>
+                <tr>
+                    <td>Last Modified</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>File Submissions</td>
+                    <td>-</td>
+                </tr>
+            </table>
               </div>    
                 <div class="task">
                   <form class="filetugas" action="upload.php" method="POST">
@@ -58,13 +83,7 @@
     </div> 
 
       <div class="columncourse rightcourse">
-           <div class="detailmapel">
-                    <span> Matematika</span>                            
-                        <ul>
-                           <li><a href= "#"><i class="fa fa-caret-right" aria-hidden="true"></i> Participants</a></li>
-                           <li><a href= "#"><i class="fa fa-caret-right" aria-hidden="true"></i> Grades</a></li>
-                        </ul>
-                </div>    
+           
   <div class="daftarmapel">
                     <span> My Courses</span>                            
                         <ul>
