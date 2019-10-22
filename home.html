@@ -5,12 +5,27 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <head>
- 
+    <link rel='stylesheet' type='text/css' media='screen' href='css/calendarview.css'>
+    <script src="js/prototype.js" type="text/javascript"></script>
+    <script src="js/calendarview.js" type="text/javascript"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>    
+    <script>
+    jQuery.noConflict();
+    function setupCalendars() {
+        // Embedded Calendar
+        Calendar.setup(
+          {
+            dateField: 'embeddedDateField',
+            parentElement: 'embeddedCalendar'
+          }
+        )
+      }
+
+      Event.observe(window, 'load', function() { event.preventDefault(); setupCalendars(); })
+    </script>
 </head>
 <body id="home">
   <div class="navbar">
@@ -44,60 +59,18 @@
           <div class="container-left">
           <span class="leftside">Calendar</span>
           <div class="jzdbox1 jzdbasf jzdcal">
-
-              <div class="jzdcalt">February 2020</div>
-              
-              <span>Sun</span>
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>                
-              
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span>1</span>
-              <span class="circle" data-title="Tugas Matematika Bab 1">2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-              <span>6</span>
-              <span>7</span>
-              <span>8</span>
-              <span>9</span>
-              <span>10</span>
-              <span>11</span>
-              <span>12</span>
-              <span>13</span>
-              <span>14</span>
-              <span>15</span>
-              <span>16</span>
-              <span>17</span>
-              <span>18</span>
-              <span>19</span>
-              <span>20</span>
-              <span>21</span>
-              <span>22</span>
-              <span>23</span>
-              <span>24</span>
-              <span>25</span>
-              <span>26</span>
-              <span>27</span>
-              <span>28</span>
-              <span>29</span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              <span class="jzdb"><!--BLANK--></span>
-              </div>
+          <div id="embeddedExample" style="">
+          <div id="embeddedCalendar" style="margin-left: auto; margin-right: auto">
+          </div>
+          <br />
+          <div id="embeddedDateField" class="dateField">
+            Select Date
+          </div>
+          <br />
+          </div>
+          </div>
+          <br />
+        </div>
             </div>
             <div class="event">
                 <span class="leftside">Upcoming Events</span>
@@ -196,8 +169,7 @@
           </div>
         </div>
       </div>
-    </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>          
+    </div>      
 </body>
  
 
