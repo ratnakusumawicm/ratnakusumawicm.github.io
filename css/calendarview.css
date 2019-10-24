@@ -74,7 +74,8 @@ div.calendar tr.days td.selected
 div.calendar tr.days td.today
 {
   font-weight: bold;
-  color: #D50000;
+  color: #0274e6;
+  /*color: #D50000;*/
 }
 
 div.calendar tr.days td.otherDay
