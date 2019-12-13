@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="profile">
+  <div class="navbar">
+    <ul>
+        <li> <img src="images/logo.png" id="logo"></li> 
+        <li><a href="home.html">Home</a></li>      
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">My Courses<i class="fa fa-fw fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="course.html">Matematika</a>
+            <a href="#">Fisika</a>
+            <a href="#">Bahasa Indonesia</a>
+            <a href="#">Kimia</a>
+            <a href="#">Bahasa Inggris</a>
+            <a href="#">Biologi</a>
+            <a href="#">Sejarah</a>
+            <a href="#">Seni Budaya</a>
+          </div>
+          <li><a href="files.html">Files</a></li>
+        </li>
+        <li class="kanan">            
+            <button type="submit" class="btn" id="logout">Log out</a></button>
+            <a id="profname" href="javascript:void(0)" class='active-page'><i class="fa fa-fw fa-user"></i>Restu Rohmatika</a>           
+        <li></li>
+      </ul>
+    </div>  
+
+    <div class="avacontainer">      
+      <div class="avatar">      
+        <img id="preview" src="https://i.imgur.com/bgouN5M.jpg"/><br/>
+        <input type="file" id="image" style="display: none;"/>
+        <!--<input type="hidden" style="display: none" value="0" name="remove" id="remove">-->
+        <button id="change" onclick="return changeProfile()">Ubah</button>
+        <button id="remove" onclick="return removeImage()">Hapus</button>
+     </div> 
+    </div>
+   
+<div class="biodata">
+  
+      <div class="right">
+          <div class="info">
+              <h3>Information</h3>
+              <div class="info_data">
+                   <div class="data">
+                      <h4>Email</h4>
+                      <p>resturohmatika@gmail.com</p>
+                   </div>
+                   <div class="data">
+                     <h4>No Handphone</h4>
+                      <p>089734294526</p>
+                </div>
+                <div class="data">
+                  <h4>Tempat Tanggal Lahir</h4>
+                   <p>Cilegon, 24 Juli 1998</p>
+             </div>
+              </div>
+          </div>
+        
+        <div class="projects">
+              <h3></h3>
+              <div class="projects_data">
+                   <div class="data">
+                      <h4>Semester</h4>
+                      <p>4</p>
+                   </div>
+                   <div class="data">
+                     <h4>Jumlah Mata Pelajaran yang ditempuh</h4>
+                      <p>7</p>
+                </div>
+              </div>
+          </div>
+        
+          
+      </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function changeProfile() {
+        $('#image').click();
+    }
+    $('#image').change(function () {
+        var imgPath = this.value;
+        var ext = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+        if (ext == "gif" || ext == "png" || ext == "jpg" || ext == "jpeg")
+            readURL(this);
+        else
+            alert("Please select image file (jpg, jpeg, png).")
+    });
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.readAsDataURL(input.files[0]);
+            reader.onload = function (e) {
+                $('#preview').attr('src', e.target.result);
+//              $("#remove").val(0);
+            };
+        }
+    }
+    function removeImage() {
+        $('#preview').attr('src', 'noimage.jpg');
+//      $("#remove").val(1);
+    }
+</script>
+
+</body>
+</html>
