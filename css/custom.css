@@ -640,3 +640,7 @@ textarea {
     background-color:  #524231;
     margin-left: 20px;
 }
+#bio {
+  max-width: 70%;
+  margin: 15px auto;
+  padding: 10px;
