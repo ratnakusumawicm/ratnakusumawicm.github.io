@@ -39,7 +39,7 @@
 
     <div class="avacontainer">      
       <div class="avatar">      
-        <img id="preview" src="https://i.imgur.com/bgouN5M.jpg"/><br/>
+        <img id="preview" src="https://icon-library.net/images/profile-pic-icon/profile-pic-icon-2.jpg"/><br/>
         <input type="file" id="image" style="display: none;"/>
         <!--<input type="hidden" style="display: none" value="0" name="remove" id="remove">-->
         <button id="change" onclick="return changeProfile()">Ubah</button>
@@ -67,7 +67,9 @@
              </div>
             <div class="data">
               <h4>Deskripsi diri</h4>
-               <button onclick="loadDoc()">baca</button>
+              <p id="hasil"></p>
+               <button id="baca" onclick="loadContent()">Baca</button>
+               <button id="tutup" onclick="tutupBio()">Tutup</button>
             </div>
               </div>
           </div>
@@ -117,16 +119,44 @@
         $('#preview').attr('src', 'noimage.jpg');
 //      $("#remove").val(1);
     }
-    function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}
+   
+
+    function loadContent() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://api.github.com/users/resturohmatika";
+            var tutup = document.getElementById("tutup");
+            var baca = document.getElementById("baca");
+
+            xhr.onloadstart = function () {
+                baca.style.display="none"
+                tutup.style.display="block";
+                
+            }
+
+            xhr.onerror = function () {
+                alert("Gagal mengambil data");
+            };
+
+            xhr.onloadend = function () {
+                if (this.responseText !== "") {
+                    var data = JSON.parse(this.responseText);
+                    var bio = document.createElement("p");
+                    bio.innerHTML = data.bio;
+
+                    document.getElementById("hasil").append(bio);
+            
+                }
+            };
+
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+
+        function tutupBio() {
+            document.getElementById("hasil").innerHTML = "";
+            tutup.style.display = "none";
+            baca.style.display = "block";
+        }
 </script>
 
 </body>
